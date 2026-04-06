@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/synthetic_tax_dataset_generator.egg-info/PKG-INFO
+src/synthetic_tax_dataset_generator.egg-info/SOURCES.txt
+src/synthetic_tax_dataset_generator.egg-info/dependency_links.txt
+src/synthetic_tax_dataset_generator.egg-info/requires.txt
+src/synthetic_tax_dataset_generator.egg-info/top_level.txt
+src/synthetic_tax_generator/__init__.py
+src/synthetic_tax_generator/cli.py
+src/synthetic_tax_generator/generator.py
+src/synthetic_tax_generator/models.py
+src/synthetic_tax_generator/pdf_renderer.py
+src/synthetic_tax_generator/tax_logic.py

@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: synthetic-tax-dataset-generator
+Version: 0.1.0
+Summary: Generate synthetic US individual tax dataset folders with consistent PDF outputs.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: faker>=25.0.0
+Requires-Dist: reportlab>=4.0.0
+
+# Synthetic Tax Dataset Generator
+
+This project scaffolds a pilot-ready pipeline for synthetic US individual tax datasets.
+
+## What it does
+
+- Generates unique fake taxpayer profiles
+- Produces logically consistent income, withholding, and refund/balance values
+- Exports a folder per case
+- Creates PDF outputs for:
+  - Input questionnaire
+  - Supporting income documents
+  - Federal return summary
+  - State return summary
+  - Executive summary
+
+## Current assumptions
+
+- Output is synthetic only
+- Forms are rendered as clean PDFs rather than filling official templates
+- Federal filing is modeled for a simple single filer
+- State logic is currently supported for `CA`, `NY`, `TX`, and `FL`
+- `TX` and `FL` generate no state income tax due
+
+Once the real sample package and PDF templates are added, the generator can be extended to map values into those exact forms.
+
+## Install
+
+```powershell
+pip install -e .
+```
+
+## Generate a pilot batch
+
+```powershell
+python -m synthetic_tax_generator.cli --count 20 --output-dir output\pilot_batch
+```
+
+## Folder structure
+
+Each case is written to its own folder:
+
+```text
+output/
+  pilot_batch/
+    case_0001/
+      questionnaire.pdf
+      supporting_docs/
+        w2_primary.pdf
+        1099_int.pdf
+      tax_forms/
+        form_1040_summary.pdf
+        state_return_summary.pdf
+      executive_summary.pdf
+      case_data.json
+```
+
+## Next step when templates arrive
+
+Add template PDFs under `templates/` and replace the placeholder `TemplateRenderer` hooks in [src/synthetic_tax_generator/pdf_renderer.py](C:/Users/ASUS/Desktop/dataset%20content%20production/src/synthetic_tax_generator/pdf_renderer.py).
