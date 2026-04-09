@@ -11,12 +11,10 @@ def _safe_currency(value: float) -> str:
 
 
 class TemplateFiller:
-    """Best-effort field filler for selected official templates.
+    """Field filler for the blank tax templates currently available in the workspace.
 
-    This uses heuristic field mappings discovered from the forms currently in the
-    workspace. It is intentionally limited to a few high-signal forms so the
-    project can produce actual field-filled PDFs where mappings are reliable
-    enough to automate.
+    The mappings are based on the local template inventory and are designed to
+    populate every blank form that has been collected for this project.
     """
 
     def __init__(self) -> None:
