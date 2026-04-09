@@ -18,4 +18,7 @@ Grateful for the learning that came from building an end-to-end workflow instead
 GitHub:
 https://github.com/singhradhika26986-ops/Synthetic-US-Tax-Dataset-Generator
 
-#Python #Automation #PDFProcessing #DataEngineering #SyntheticData #TaxTechnology #DocumentAutomation #GitHub
+Live Demo:
+https://cold-parents-joke.loca.lt
+
+#Python #Automation #PDFProcessing #DataEngineering #SyntheticData #TaxTechnology #DocumentAutomation #Streamlit #GitHub

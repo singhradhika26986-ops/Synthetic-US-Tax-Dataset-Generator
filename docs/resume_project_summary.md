@@ -8,6 +8,11 @@ Synthetic US Tax Dataset Generator
 
 Built a Python-based document automation system to generate synthetic US tax datasets with supporting documents, executive summaries, and official-template PDF form filling.
 
+## Links
+
+- GitHub: https://github.com/singhradhika26986-ops/Synthetic-US-Tax-Dataset-Generator
+- Live Demo: https://cold-parents-joke.loca.lt
+
 ## Resume Bullets
 
 - Developed a synthetic tax dataset generation pipeline covering 2,000 tax cases across California, Texas, New York, Illinois, and Florida for tax years 2020 through 2025.

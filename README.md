@@ -4,6 +4,14 @@ This project generates synthetic US individual tax datasets with questionnaire P
 supporting documents, executive summaries, planned-form packets, and official-template
 filled outputs for the blank forms available in the local workspace.
 
+## Live demo
+
+- Temporary public demo: [https://cold-parents-joke.loca.lt](https://cold-parents-joke.loca.lt)
+- GitHub repository: [Synthetic-US-Tax-Dataset-Generator](https://github.com/singhradhika26986-ops/Synthetic-US-Tax-Dataset-Generator)
+
+Note: the public demo uses a temporary tunnel to a local Streamlit process, so the URL
+will stay active only while the local app process is running.
+
 ## Current coverage
 
 - States: `CA`, `TX`, `NY`, `IL`, `FL`
