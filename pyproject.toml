@@ -9,6 +9,7 @@ description = "Generate synthetic US individual tax dataset folders with consist
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "streamlit>=1.44",
     "pypdf>=5.0",
 ]
 

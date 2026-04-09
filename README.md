@@ -38,7 +38,7 @@ Each synthetic case can include:
 The `template_filled` folder contains field-filled outputs for the blank templates that
 exist locally under `templates/`. The current template-filler implementation covers the
 federal, state, and supporting-document blanks listed in
-[docs/final_requirement_audit.md](C:/Users/ASUS/Desktop/dataset%20content%20production/docs/final_requirement_audit.md).
+[`docs/final_requirement_audit.md`](docs/final_requirement_audit.md).
 
 ## Install
 
@@ -46,6 +46,12 @@ federal, state, and supporting-document blanks listed in
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 pip install -e .
+```
+
+Or install the Streamlit app dependencies directly:
+
+```powershell
+pip install -r requirements.txt
 ```
 
 ## Common commands
@@ -68,6 +74,12 @@ Generate the full production batch:
 python .\generate_tax_datasets.py --count 2000 --output-dir output\final_2000
 ```
 
+Run the Streamlit demo app locally:
+
+```powershell
+streamlit run .\streamlit_app.py
+```
+
 Split the full batch into weekly deliveries:
 
 ```powershell
@@ -87,10 +99,27 @@ ignored in Git for repository health. This repository is intended to track the g
 code, tooling, and documentation. Delivery artifacts stay local or should be shared
 through zip files, cloud storage, or release assets.
 
+## Streamlit deployment
+
+This repository includes a Streamlit entrypoint at [`streamlit_app.py`](streamlit_app.py).
+
+To deploy it on Streamlit Community Cloud:
+
+1. Open your workspace at [share.streamlit.io](https://share.streamlit.io/).
+2. Click `Create app`.
+3. Select this GitHub repository and choose `streamlit_app.py` as the entrypoint.
+4. Deploy the app and optionally choose a custom subdomain.
+
+Official Streamlit docs:
+
+- [Deploy your app on Community Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy)
+- [File organization for your Community Cloud app](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/file-organization)
+
 ## Project files
 
-- Entry point: [generate_tax_datasets.py](C:/Users/ASUS/Desktop/dataset%20content%20production/generate_tax_datasets.py)
-- Generator logic: [generator.py](C:/Users/ASUS/Desktop/dataset%20content%20production/src/synthetic_tax_generator/generator.py)
-- PDF bundle rendering: [pdf_renderer.py](C:/Users/ASUS/Desktop/dataset%20content%20production/src/synthetic_tax_generator/pdf_renderer.py)
-- Official template filling: [template_filler.py](C:/Users/ASUS/Desktop/dataset%20content%20production/src/synthetic_tax_generator/template_filler.py)
-- Final audit: [final_requirement_audit.md](C:/Users/ASUS/Desktop/dataset%20content%20production/docs/final_requirement_audit.md)
+- Entry point: [`generate_tax_datasets.py`](generate_tax_datasets.py)
+- Streamlit app: [`streamlit_app.py`](streamlit_app.py)
+- Generator logic: [`src/synthetic_tax_generator/generator.py`](src/synthetic_tax_generator/generator.py)
+- PDF bundle rendering: [`src/synthetic_tax_generator/pdf_renderer.py`](src/synthetic_tax_generator/pdf_renderer.py)
+- Official template filling: [`src/synthetic_tax_generator/template_filler.py`](src/synthetic_tax_generator/template_filler.py)
+- Final audit: [`docs/final_requirement_audit.md`](docs/final_requirement_audit.md)
